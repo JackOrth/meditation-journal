@@ -22,12 +22,12 @@ function Journal({journals, completeJournal, removeJournal, updateJournal}) {
     }
     return journals.map((journal, index) => (
        <div 
-        className ={journal.isComplete ? 'journal-row complete' : 'journal-row'} 
+        class="md:flex md:items-center mb-6 border-4 border-light-blue-500 border-opacity-100"
         key={index}>
             <div key={journal.id} onClick={() => completeJournal(journal.id)}>
                 {journal.text}
             </div>
-            <div className="icons">
+            <div class="md:flex md:items-center mb-6">
                 <RiCloseCircleLine
                 onClick={() => removeJournal(journal.id)}
                 class="cursor-pointer"
